@@ -158,6 +158,7 @@ animations = [ {
 } ]
 
 [node name="jinglecats" type="Node2D"]
+editor/display_folded = true
 script = ExtResource( 1 )
 
 [node name="Cat1Animation" type="AnimatedSprite" parent="."]
