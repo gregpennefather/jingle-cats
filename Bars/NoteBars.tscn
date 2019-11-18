@@ -6,23 +6,18 @@
 
 [node name="RedBar" parent="." instance=ExtResource( 1 )]
 editor/display_folded = true
-default_color = Color( 0, 0, 0, 1 )
 note_colour = Color( 1, 0, 0, 1 )
-
-[node name="NoteTarget" parent="RedBar" index="2"]
-colour = Color( 255, 255, 255, 0 )
+action = "ui_left"
 
 [node name="GreenBar" parent="." instance=ExtResource( 1 )]
 editor/display_folded = true
 position = Vector2( 0, 50 )
-default_color = Color( 0, 0, 0, 1 )
 note_colour = Color( 0, 1, 0.180392, 1 )
+action = "ui_down"
 
 [node name="OrangeBar" parent="." instance=ExtResource( 1 )]
 editor/display_folded = true
 position = Vector2( 0, 100 )
-default_color = Color( 0, 0, 0, 1 )
 texture_mode = 7
 note_colour = Color( 1, 0.631373, 0, 1 )
-
-[editable path="RedBar"]
+action = "ui_right"
