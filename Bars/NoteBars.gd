@@ -1,5 +1,4 @@
-extends Node2D
-
+extends Control
 
 onready var RedBar = get_node("RedBar")
 onready var GreenBar = get_node("GreenBar")

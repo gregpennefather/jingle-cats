@@ -1,0 +1,95 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://festive_theme.tres" type="Theme" id=1]
+[ext_resource path="res://Menu.gd" type="Script" id=2]
+[ext_resource path="res://Images/Banner.png" type="Texture" id=3]
+[ext_resource path="res://Beyond Wonderland.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://festive_font.tres" type="DynamicFont" id=5]
+[ext_resource path="res://SceneTransitionButton.gd" type="Script" id=6]
+[ext_resource path="res://Images/BuyTheBundle.png" type="Texture" id=7]
+[ext_resource path="res://FadedTransition.tscn" type="PackedScene" id=8]
+
+[sub_resource type="DynamicFont" id=1]
+size = 72
+outline_color = Color( 0.886275, 0.0745098, 0.313726, 1 )
+font_data = ExtResource( 4 )
+
+[node name="Menu" type="Control"]
+margin_right = 1280.0
+margin_bottom = 720.0
+rect_scale = Vector2( 1, 0.99046 )
+theme = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="Banner" type="Sprite" parent="."]
+position = Vector2( 650, 150 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 3 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+editor/display_folded = true
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -256.0
+margin_top = -87.3993
+margin_right = 253.0
+margin_bottom = 389.601
+custom_constants/separation = 15
+
+[node name="Title" type="Label" parent="VBoxContainer"]
+margin_right = 513.0
+margin_bottom = 167.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "SHARK HERO
+(of the people)"
+align = 1
+
+[node name="Buttons" type="VBoxContainer" parent="VBoxContainer"]
+margin_top = 182.0
+margin_right = 513.0
+margin_bottom = 312.0
+custom_constants/separation = 5
+
+[node name="Easy" type="Button" parent="VBoxContainer/Buttons"]
+margin_right = 513.0
+margin_bottom = 40.0
+grow_horizontal = 0
+custom_fonts/font = ExtResource( 5 )
+text = "Easy"
+script = ExtResource( 6 )
+scene_to_transition_to = "res://Sorry.tscn"
+
+[node name="Medium" type="Button" parent="VBoxContainer/Buttons"]
+margin_top = 45.0
+margin_right = 513.0
+margin_bottom = 85.0
+custom_fonts/font = ExtResource( 5 )
+text = "Medium"
+script = ExtResource( 6 )
+scene_to_transition_to = "res://Sorry.tscn"
+
+[node name="Hard" type="Button" parent="VBoxContainer/Buttons"]
+margin_top = 90.0
+margin_right = 513.0
+margin_bottom = 130.0
+custom_fonts/font = ExtResource( 5 )
+text = "Hard"
+script = ExtResource( 6 )
+scene_to_transition_to = "res://GameScene.tscn"
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer"]
+margin_top = 327.0
+margin_right = 513.0
+margin_bottom = 446.0
+texture = ExtResource( 7 )
+
+[node name="FadedTransition" parent="." instance=ExtResource( 8 )]
+visible = false
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1280.0
+margin_bottom = 750.0
