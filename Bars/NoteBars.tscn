@@ -27,3 +27,9 @@ position = Vector2( 0, 115 )
 texture_mode = 7
 note_colour = Color( 1, 0.631373, 0, 1 )
 action = "ui_right"
+[connection signal="note_failed" from="RedBar" to="." method="_on_note_failed"]
+[connection signal="note_hit" from="RedBar" to="." method="_on_RedBar_note_hit"]
+[connection signal="note_failed" from="GreenBar" to="." method="_on_note_failed"]
+[connection signal="note_hit" from="GreenBar" to="." method="_on_GreenBar_note_hit"]
+[connection signal="note_failed" from="OrangeBar" to="." method="_on_note_failed"]
+[connection signal="note_hit" from="OrangeBar" to="." method="_on_OrangeBar_note_hit"]

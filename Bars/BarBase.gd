@@ -5,6 +5,9 @@ export (String) var action
 
 var missed_colour = Color(255, 0, 0)
 
+signal note_hit
+signal note_failed
+
 onready var spawner = get_node("SpawnPoint")
 onready var note_target = get_node("NoteTarget")
 onready var notes = get_node("Notes")
@@ -38,9 +41,12 @@ func _input(event):
 	
 func on_note_hit():
 	animation_player.play('hit')
+	emit_signal('note_hit')
 
 func on_note_missed():
 	animation_player.play('missed')
+	emit_signal("note_failed")
 	
 func on_note_hit_early():
 	animation_player.play('missed')
+	emit_signal("note_failed")

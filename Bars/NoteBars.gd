@@ -4,6 +4,9 @@ onready var RedBar = get_node("RedBar")
 onready var GreenBar = get_node("GreenBar")
 onready var OrangeBar = get_node("OrangeBar")
 
+signal note_hit
+signal note_failed
+
 const FIRST_NOTE_OFFSET = 10.25
 const NOTE_LENGTH = 0.25
 const RED_BAR_NOTES = [Note.NoteType.G_Long, Note.NoteType.DTop_Long]
@@ -81,3 +84,17 @@ func noteStringToEnum(noteTypeString):
 		return Note.NoteType.G_Long
 	print('could no match noteTypeString : ' + noteTypeString)
 	return null
+
+func _on_RedBar_note_hit():
+	emit_signal("note_hit")
+
+
+func _on_GreenBar_note_hit():
+	emit_signal("note_hit")
+
+
+func _on_OrangeBar_note_hit():
+	emit_signal("note_hit")
+
+func _on_note_failed():
+	emit_signal("note_failed")

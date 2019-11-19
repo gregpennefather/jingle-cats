@@ -50,6 +50,7 @@ func play():
 func note_hit():
 	emit_signal('note_hit')
 	hitCircle.expand(20, 40, 0.2);
+	make_note_inactive(false)
 	
 func note_hit_early():
 	emit_signal('note_hit_early')
@@ -59,6 +60,7 @@ func note_missed():
 	emit_signal('note_missed')
 	make_note_inactive()
 	
-func make_note_inactive():
-	self.set_colour(Color(colour.r, colour.g, colour.b, 0.5))
+func make_note_inactive(with_fade = true):
+	if with_fade:
+		self.set_colour(Color(colour.r, colour.g, colour.b, 0.5))
 	active = false
