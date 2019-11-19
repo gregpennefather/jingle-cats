@@ -20,7 +20,7 @@ func _ready():
 	timer.wait_time = 2
 	timer.connect("timeout", self, "add_A_Long")
 	timer.start()
-	timer.one_shot = true
+	timer.one_shot = false
 	add_child(timer)
 	
 func _input(event):

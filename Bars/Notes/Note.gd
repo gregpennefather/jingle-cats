@@ -14,10 +14,13 @@ signal note_missed
 signal note_hit
 signal note_hit_early
 
+onready var hitCircle = get_node("HitCircle")
+
 func set_colour(new_colour):
 	colour = new_colour
 	print(new_colour)
 	get_node("Area2D/CircleCollision").colour = new_colour
+	get_node("HitCircle").colour = new_colour
 
 func set_note_audio(audio_stream):
 	get_node("AudioPlayer").stream = audio_stream
@@ -43,7 +46,7 @@ func play():
 	
 func note_hit():
 	emit_signal('note_hit')
-	make_note_inactive()
+	hitCircle.expand(20, 40, 0.2);
 	
 func note_hit_early():
 	emit_signal('note_hit_early')
