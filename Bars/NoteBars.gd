@@ -9,7 +9,7 @@ signal note_failed
 
 const FIRST_NOTE_OFFSET = 10.25
 const NOTE_LENGTH = 0.25
-const RED_BAR_NOTES = [Note.NoteType.G_Long, Note.NoteType.DTop_Long]
+const RED_BAR_NOTES = [Note.NoteType.G_Long, Note.NoteType.E_Long]
 const GREEN_BAR_NOTES = [Note.NoteType.A_Long]
 const BLUE_BAR_NOTES = [Note.NoteType.A_Short]
 

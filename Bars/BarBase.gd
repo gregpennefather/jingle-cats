@@ -19,12 +19,10 @@ func _ready():
 	get_node("Outline").default_color = note_colour
 	
 func add_note(noteType):
-	print('adding note: ' + str(noteType))
 	get_node("SpawnPoint").spawn(noteType)
 	
 func add_note_array(note_play_info_array):
 	for play_info in note_play_info_array:
-		print(str(play_info.PlayTime) + ' ' + str(play_info.NoteType))
 		var timer = Timer.new()
 		timer.name = 'Time' + str(play_info.PlayTime) + 'Note' + str(play_info.NoteType)
 		timer.wait_time = play_info.PlayTime - 4

@@ -21,12 +21,12 @@ onready var hitCircle = get_node("HitCircle")
 
 func set_colour(new_colour):
 	colour = new_colour
-	print(new_colour)
 	get_node("Area2D/CircleCollision").colour = new_colour
 	get_node("HitCircle").colour = new_colour
 
 func set_note_audio(audio_stream):
 	get_node("AudioPlayer").stream = audio_stream
+	print(get_node("AudioPlayer").stream)
 
 func _process(delta):
 	position = position - Vector2(NOTE_SPEED * delta, 0)
@@ -45,11 +45,11 @@ func play():
 			note_hit()
 		else:
 			note_hit_early()
-		get_node("AudioPlayer").play()
 	
 func note_hit():
 	emit_signal('note_hit')
 	hitCircle.expand(20, 40, 0.2);
+	get_node("AudioPlayer").play()
 	make_note_inactive(false)
 	
 func note_hit_early():
