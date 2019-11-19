@@ -8,9 +8,20 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "Position2D",
+"class": "Note",
+"language": "GDScript",
+"path": "res://Bars/Notes/Note.gd"
+}, {
+"base": "Reference",
+"class": "PlayTimeInfo",
+"language": "GDScript",
+"path": "res://Bars/Notes/PlayTimeInfo.gd"
+} ]
 _global_script_class_icons={
-
+"Note": "",
+"PlayTimeInfo": ""
 }
 
 [application]

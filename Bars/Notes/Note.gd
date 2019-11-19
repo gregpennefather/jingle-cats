@@ -1,4 +1,7 @@
+class_name Note
 extends Position2D
+
+enum NoteType { A_Long, A_Short, B_Long, B_Short, C_Short, CBottom_Long, CTop_Long, DBottom_Long, DTop_Long, E_Long, ETop_Long, F_Short, FTop_long, G_Long }
 
 const NOTE_SPEED = 250
 const VALID_NOTE_RADIUS = 25

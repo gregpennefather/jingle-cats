@@ -14,23 +14,27 @@ func _ready():
 	note_target.colour = note_colour
 	spawner.note_colour = note_colour
 	get_node("Outline").default_color = note_colour
-	get_node("SpawnPoint").spawn(7)
 	
-	var timer = Timer.new()
-	timer.wait_time = 2
-	timer.connect("timeout", self, "add_A_Long")
-	timer.start()
-	timer.one_shot = false
-	add_child(timer)
+func add_note(noteType):
+	print('adding note: ' + str(noteType))
+	get_node("SpawnPoint").spawn(noteType)
+	
+func add_note_array(note_play_info_array):
+	for play_info in note_play_info_array:
+		print(str(play_info.PlayTime) + ' ' + str(play_info.NoteType))
+		var timer = Timer.new()
+		timer.name = 'Time' + str(play_info.PlayTime) + 'Note' + str(play_info.NoteType)
+		timer.wait_time = play_info.PlayTime - 4
+		timer.one_shot = true
+		timer.connect('timeout', self, 'add_note', [play_info.NoteType])
+		add_child(timer)
+		timer.start()
 	
 func _input(event):
 	if (event.is_action_pressed(action)):
 		var next_note = notes.first_valid_note()
 		if (next_note != null):
 			next_note.play()
-			
-func add_A_Long():
-	spawner.spawn(0)
 	
 func on_note_hit():
 	animation_player.play('hit')
