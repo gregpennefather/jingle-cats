@@ -7,11 +7,11 @@ onready var OrangeBar = get_node("OrangeBar")
 signal note_hit
 signal note_failed
 
-const FIRST_NOTE_OFFSET = 10.25
-const NOTE_LENGTH = 0.25
-const RED_BAR_NOTES = [Note.NoteType.G_Long, Note.NoteType.E_Long]
-const GREEN_BAR_NOTES = [Note.NoteType.A_Long]
-const BLUE_BAR_NOTES = [Note.NoteType.A_Short]
+const FIRST_NOTE_OFFSET = 10.5
+const NOTE_LENGTH = 0.565
+const RED_BAR_NOTES = [Note.NoteType.G_Long, Note.NoteType.E_Long, Note.NoteType.CBottom_Long, Note.NoteType.DBottom_Long, Note.NoteType.CTop_Long]
+const GREEN_BAR_NOTES = [Note.NoteType.A_Long, Note.NoteType.B_Long, Note.NoteType.DTop_Long, Note.NoteType.F_Short]
+const BLUE_BAR_NOTES = [Note.NoteType.A_Short, Note.NoteType.B_Short, Note.NoteType.FTop_long, Note.NoteType.ETop_Long]
 
 # Called when the node enters the scene tree for the first time.
 func _ready():	
@@ -55,7 +55,7 @@ func load_note_info(note_info_array: Array) -> Array:
 	return notes
 	
 func note_index_to_playtime(index):
-	return FIRST_NOTE_OFFSET + (NOTE_LENGTH * index)
+	return FIRST_NOTE_OFFSET + (NOTE_LENGTH * (index-1))
 	
 func noteStringToEnum(noteTypeString):
 	if (noteTypeString == 'A_Long'):
@@ -68,6 +68,8 @@ func noteStringToEnum(noteTypeString):
 		return Note.NoteType.B_Short
 	if (noteTypeString == 'CBottom_Long'):
 		return Note.NoteType.CBottom_Long
+	if (noteTypeString == 'CTop_Long'):
+		return Note.NoteType.CTop_Long
 	if (noteTypeString == 'DBottom_Long'):
 		return Note.NoteType.DBottom_Long
 	if (noteTypeString == 'DTop_Long'):
@@ -78,7 +80,7 @@ func noteStringToEnum(noteTypeString):
 		return Note.NoteType.ETop_Long
 	if (noteTypeString == 'F_Short'):
 		return Note.NoteType.F_Short
-	if (noteTypeString == 'FTop_long'):
+	if (noteTypeString == 'FTop_Long'):
 		return Note.NoteType.FTop_long
 	if (noteTypeString == 'G_Long'):
 		return Note.NoteType.G_Long

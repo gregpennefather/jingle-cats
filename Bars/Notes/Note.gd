@@ -26,7 +26,6 @@ func set_colour(new_colour):
 
 func set_note_audio(audio_stream):
 	get_node("AudioPlayer").stream = audio_stream
-	print(get_node("AudioPlayer").stream)
 
 func _process(delta):
 	position = position - Vector2(NOTE_SPEED * delta, 0)

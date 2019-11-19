@@ -38,7 +38,7 @@ func spawn(noteType):
 		Note.NoteType.DBottom_Long:
 			note.note_audio = DBottom_Long
 		Note.NoteType.DTop_Long:
-			note.note_audio = DBottom_Long
+			note.note_audio = DTop_Long
 		Note.NoteType.E_Long:
 			note.note_audio = E_Long
 		Note.NoteType.ETop_Long:

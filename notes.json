@@ -1,18 +1,192 @@
 [
   {
-    "index": 0,
+    "index": 1,
     "note": "G_Long"
   },
   {
-    "index": 2,
-    "note": "A_Long"
+    "index": 3.5,
+    "note": "A_Short"
   },
   {
-    "index": 3,
+    "index": 4,
     "note": "G_Long"
   },
   {
     "index": 5,
     "note": "E_Long"
-  }
+  },
+    {
+    "index": 9,
+    "note": "G_Long"
+    },
+    {
+    "index": 11.5,
+    "note": "A_Short"
+    },
+    {
+    "index": 12,
+    "note": "G_Long"
+    },
+    {
+    "index": 13,
+    "note": "E_Long"
+    },
+    {
+        "phrase": 2,
+        "index": 17,
+        "note": "DTop_Long"
+    },
+    {
+        "index": 20,
+        "note": "DTop_Long"
+    },
+    {
+        "index": 21,
+        "note": "B_Long"
+    },
+    {
+        "index": 25,
+        "note": "CTop_Long"
+    },
+    {
+        "index": 28,
+        "note": "CTop_Long"
+    },
+    {
+        "index": 29,
+        "note": "G_Long"
+    },
+    {
+        "phrase": 3,
+        "index": 33,
+        "note": "A_Long"
+    },
+    {
+        "index": 36,
+        "note": "A_Long"
+    },
+    {
+        "index": 37,
+        "note": "CTop_Long"
+    },
+    {
+        "index": 39.5,
+        "note": "B_Short"
+    },
+    {
+        "index": 40,
+        "note": "A_Long"
+    },
+    {
+        "index": 41,
+        "note": "G_Long"
+    },
+    {
+        "index": 43.5,
+        "note": "A_Short"
+    },
+    {
+        "index": 44,
+        "note": "G_Long"
+    },
+    {
+        "index": 45,
+        "note": "E_Long"
+    },
+    {
+        "phrase": 4,
+        "index": 49,
+        "note": "A_Long"
+    },
+    {
+        "index": 52,
+        "note": "A_Long"
+    },
+    {
+        "index": 53,
+        "note": "CTop_Long"
+    },
+    {
+        "index": 55.5,
+        "note": "B_Short"
+    },
+    {
+        "index": 56,
+        "note": "A_Long"
+    },
+    {
+        "index": 57,
+        "note": "G_Long"
+    },
+    {
+        "index": 59.5,
+        "note": "A_Short"
+    },
+    {
+        "index": 60,
+        "note": "G_Long"
+    },
+    {
+        "index": 61,
+        "note": "E_Long"
+    },
+    {
+        "phrase": 5,
+        "index": 65,
+        "note": "DTop_Long"
+    },
+    {
+        "index": 68,
+        "note": "DTop_Long"
+    },
+    {
+        "index": 69,
+        "note": "FTop_Long"
+    },
+    {
+        "index": 71.5,
+        "note": "DTop_Long"
+    },
+    {
+        "index": 72,
+        "note": "B_Short"
+    },
+    {
+        "index": 73,
+        "note": "CTop_Long"
+    },
+    {
+        "index": 77,
+        "note": "ETop_Long"
+    },
+    {
+        "phrase": 6,
+        "index": 81,
+        "note": "CTop_Long"
+    },
+    {
+        "index": 83.5,
+        "note": "G_Long"
+    },
+    {
+        "index": 84,
+        "note": "E_Long"
+    },
+    {
+        "index": 85,
+        "note": "G_Long"
+    },
+    {
+        "index": 87.5,
+        "note": "F_Short"
+    },
+    {
+        "index": 88,
+        "note": "DBottom_Long"
+    },
+    {
+        "end_index_after": 93,
+        "index": 89,
+        "note": "CBottom_Long"
+    }
 ]
