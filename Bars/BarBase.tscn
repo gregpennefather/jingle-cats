@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Bars/BarBase.gd" type="Script" id=1]
 [ext_resource path="res://Bars/Notes.gd" type="Script" id=2]
@@ -6,8 +6,19 @@
 [ext_resource path="res://Bars/Notes/Note.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Blaghs/A-Long.wav" type="AudioStream" id=5]
 [ext_resource path="res://Blaghs/A-Short.wav" type="AudioStream" id=6]
-[ext_resource path="res://Blaghs/G-Long.wav" type="AudioStream" id=7]
-[ext_resource path="res://Bars/Notes/NoteTarget.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Blaghs/B-Long.wav" type="AudioStream" id=7]
+[ext_resource path="res://Blaghs/B-Short.wav" type="AudioStream" id=8]
+[ext_resource path="res://Blaghs/C-Short.wav" type="AudioStream" id=9]
+[ext_resource path="res://Blaghs/CBottom-Long.wav" type="AudioStream" id=10]
+[ext_resource path="res://Blaghs/CTop-Long.wav" type="AudioStream" id=11]
+[ext_resource path="res://Blaghs/DBottom-Long.wav" type="AudioStream" id=12]
+[ext_resource path="res://Blaghs/DTop-Long.wav" type="AudioStream" id=13]
+[ext_resource path="res://Blaghs/E-Long.wav" type="AudioStream" id=14]
+[ext_resource path="res://Blaghs/ETop-Long.wav" type="AudioStream" id=15]
+[ext_resource path="res://Blaghs/F-Short.wav" type="AudioStream" id=16]
+[ext_resource path="res://Blaghs/FTop-Long.wav" type="AudioStream" id=17]
+[ext_resource path="res://Blaghs/G-Long.wav" type="AudioStream" id=18]
+[ext_resource path="res://Bars/Notes/NoteTarget.tscn" type="PackedScene" id=19]
 
 [sub_resource type="Animation" id=3]
 resource_name = "hit"
@@ -61,7 +72,18 @@ script = ExtResource( 3 )
 note_scene = ExtResource( 4 )
 A_Long = ExtResource( 5 )
 A_Short = ExtResource( 6 )
-G_Long = ExtResource( 7 )
+B_Long = ExtResource( 7 )
+B_Short = ExtResource( 8 )
+C_Short = ExtResource( 9 )
+CBottom_Long = ExtResource( 10 )
+CTop_Long = ExtResource( 11 )
+DBottom_Long = ExtResource( 12 )
+DTop_Long = ExtResource( 13 )
+E_Long = ExtResource( 14 )
+ETop_Long = ExtResource( 15 )
+F_Short = ExtResource( 16 )
+FTop_long = ExtResource( 17 )
+G_Long = ExtResource( 18 )
 
 [node name="Outline" type="Line2D" parent="."]
 z_index = 1
@@ -71,7 +93,7 @@ width = 32.0
 default_color = Color( 1, 1, 1, 1 )
 texture_mode = -1039925248
 
-[node name="NoteTarget" parent="." instance=ExtResource( 8 )]
+[node name="NoteTarget" parent="." instance=ExtResource( 19 )]
 position = Vector2( 280, 0 )
 z_index = 3
 radius = 20.0

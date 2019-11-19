@@ -9,6 +9,7 @@ export (AudioStream) var C_Short
 export (AudioStream) var CBottom_Long
 export (AudioStream) var CTop_Long
 export (AudioStream) var DBottom_Long
+export (AudioStream) var DTop_Long
 export (AudioStream) var E_Long
 export (AudioStream) var ETop_Long
 export (AudioStream) var F_Short
@@ -35,6 +36,8 @@ func spawn(noteType):
 		[Note.NoteType.CTop_Long]:
 			note.note_audio = CTop_Long
 		[Note.NoteType.DBottom_Long]:
+			note.note_audio = DBottom_Long
+		[Note.NoteType.DTop_Long]:
 			note.note_audio = DBottom_Long
 		[Note.NoteType.E_Long]:
 			note.note_audio = E_Long
