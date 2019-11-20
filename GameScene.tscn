@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://GameScene.gd" type="Script" id=1]
 [ext_resource path="res://Video/jinglecatswebm.webm" type="VideoStream" id=2]
@@ -42,6 +42,13 @@ tracks/1/keys = {
 "update": 0,
 "values": [ 0.0, -80.0 ]
 }
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.294118, 0.67451, 0.839216, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
 
 [sub_resource type="DynamicFont" id=2]
 size = 64
@@ -127,12 +134,12 @@ margin_right = 72.0
 margin_bottom = 38.5
 
 [node name="ResultPanel" type="Panel" parent="UI"]
-editor/display_folded = true
 visible = false
 margin_left = 450.0
 margin_top = 120.0
 margin_right = 810.0
 margin_bottom = 420.0
+custom_styles/panel = SubResource( 3 )
 script = ExtResource( 8 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="UI/ResultPanel"]
