@@ -2,14 +2,14 @@
 
 [ext_resource path="res://festive_font.tres" type="DynamicFont" id=1]
 
-[sub_resource type="StyleBoxFlat" id=2]
+[sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.886275, 0.0745098, 0.313726, 1 )
 corner_radius_top_left = 3
 corner_radius_top_right = 3
 corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 
-[sub_resource type="StyleBoxFlat" id=1]
+[sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 1, 1, 1, 0.588235 )
 corner_radius_top_left = 3
 corner_radius_top_right = 3
@@ -36,8 +36,8 @@ Button/constants/hseparation = 25
 Button/fonts/font = null
 Button/styles/disabled = null
 Button/styles/focus = null
-Button/styles/hover = SubResource( 2 )
-Button/styles/normal = SubResource( 1 )
+Button/styles/hover = SubResource( 1 )
+Button/styles/normal = SubResource( 2 )
 Button/styles/pressed = SubResource( 3 )
 Panel/styles/panel = SubResource( 4 )
 Panel/styles/panelf = null
