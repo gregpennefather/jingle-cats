@@ -105,13 +105,23 @@ margin_top = -180.0
 margin_right = 640.0
 theme = ExtResource( 3 )
 
+[node name="Press Keys" type="Label" parent="UI/Panel"]
+margin_left = 30.0
+margin_right = 102.0
+margin_bottom = 40.0
+custom_colors/font_color = Color( 0.886275, 0.0745098, 0.313726, 1 )
+custom_constants/shadow_offset_x = 4
+custom_constants/shadow_offset_y = 1
+custom_constants/shadow_as_outline = 1
+text = "Keys:"
+align = 1
+
 [node name="NoteBars" parent="UI/Panel" instance=ExtResource( 7 )]
-anchor_top = 0.5
 anchor_right = 0.0
-anchor_bottom = 0.5
-margin_top = -66.5
-margin_right = 1280.0
-margin_bottom = 66.5
+anchor_bottom = 0.0
+margin_top = 38.5
+margin_right = 72.0
+margin_bottom = 38.5
 
 [node name="ResultPanel" type="Panel" parent="UI"]
 editor/display_folded = true

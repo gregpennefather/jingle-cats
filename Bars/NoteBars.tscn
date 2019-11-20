@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Bars/NoteBars.gd" type="Script" id=1]
 [ext_resource path="res://Bars/BarBase.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Images/arrowLeft.png" type="Texture" id=3]
+[ext_resource path="res://Images/arrowDown.png" type="Texture" id=4]
+[ext_resource path="res://Images/arrowRight.png" type="Texture" id=5]
 
 [node name="NoteBars" type="Control"]
 anchor_right = 1.0
@@ -15,11 +18,27 @@ position = Vector2( 0, 15 )
 note_colour = Color( 1, 0, 0, 1 )
 action = "ui_left"
 
+[node name="arrowLeft" type="Sprite" parent="RedBar"]
+modulate = Color( 1, 0, 0, 1 )
+position = Vector2( 75, 0 )
+scale = Vector2( 0.4, 0.4 )
+z_index = 3
+z_as_relative = false
+texture = ExtResource( 3 )
+
 [node name="GreenBar" parent="." instance=ExtResource( 2 )]
 editor/display_folded = true
 position = Vector2( 0, 65 )
 note_colour = Color( 0, 1, 0.180392, 1 )
 action = "ui_down"
+
+[node name="arrowDown" type="Sprite" parent="GreenBar"]
+modulate = Color( 0, 1, 0.180392, 1 )
+position = Vector2( 75, 0 )
+scale = Vector2( 0.4, 0.4 )
+z_index = 3
+z_as_relative = false
+texture = ExtResource( 4 )
 
 [node name="OrangeBar" parent="." instance=ExtResource( 2 )]
 editor/display_folded = true
@@ -27,6 +46,14 @@ position = Vector2( 0, 115 )
 texture_mode = 7
 note_colour = Color( 1, 0.631373, 0, 1 )
 action = "ui_right"
+
+[node name="arrowRight" type="Sprite" parent="OrangeBar"]
+modulate = Color( 1, 0.631373, 0, 1 )
+position = Vector2( 75, 0 )
+scale = Vector2( 0.4, 0.4 )
+z_index = 3
+z_as_relative = false
+texture = ExtResource( 5 )
 [connection signal="note_failed" from="RedBar" to="." method="_on_note_failed"]
 [connection signal="note_hit" from="RedBar" to="." method="_on_RedBar_note_hit"]
 [connection signal="note_failed" from="GreenBar" to="." method="_on_note_failed"]
