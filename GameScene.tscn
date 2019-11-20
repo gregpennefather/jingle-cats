@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://GameScene.gd" type="Script" id=1]
 [ext_resource path="res://Video/jinglecatswebm.webm" type="VideoStream" id=2]
@@ -12,6 +12,8 @@
 [ext_resource path="res://SceneTransitionButton.gd" type="Script" id=10]
 [ext_resource path="res://GameSceneAudioStreamPlayer.gd" type="Script" id=11]
 [ext_resource path="res://Blaghs/DBottom-Long.wav" type="AudioStream" id=12]
+[ext_resource path="res://OtherAudio/youredoinggreatdad.wav" type="AudioStream" id=13]
+[ext_resource path="res://OtherAudio/beans.wav" type="AudioStream" id=14]
 
 [sub_resource type="Animation" id=1]
 resource_name = "fade_out"
@@ -59,7 +61,6 @@ autoplay = true
 anims/fade_out = SubResource( 1 )
 
 [node name="UI" type="Control" parent="."]
-editor/display_folded = true
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_right = 1280.0
@@ -183,8 +184,11 @@ wait_time = 65.0
 autostart = true
 
 [node name="GameSceneAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+volume_db = -3.0
 script = ExtResource( 11 )
 BlaghSound = ExtResource( 12 )
+DoingGreatSound = ExtResource( 13 )
+BeansedItSound = ExtResource( 14 )
 [connection signal="note_failed" from="UI/Panel/NoteBars" to="." method="_on_NoteBars_note_failed"]
 [connection signal="note_hit" from="UI/Panel/NoteBars" to="." method="_on_NoteBars_note_hit"]
 [connection signal="pressed" from="UI/ResultPanel/VBoxContainer/BlaghButton" to="." method="_on_BlaghButton_pressed"]

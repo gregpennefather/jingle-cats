@@ -29,6 +29,7 @@ script = ExtResource( 2 )
 volume_db = -10.0
 
 [node name="HitCircle" type="CollisionShape2D" parent="."]
+visible = false
 shape = SubResource( 2 )
 script = ExtResource( 3 )
 colour = Color( 1, 0, 0, 1 )

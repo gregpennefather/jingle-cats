@@ -8,10 +8,10 @@ signal note_hit
 signal note_failed
 
 const FIRST_NOTE_OFFSET = 10.5
-const NOTE_LENGTH = 0.565
-const RED_BAR_NOTES = [Note.NoteType.G_Long, Note.NoteType.DTop_Long,  Note.NoteType.CBottom_Long, Note.NoteType.DBottom_Long]
+const NOTE_LENGTH = 0.60
+const RED_BAR_NOTES = [Note.NoteType.G_Long, Note.NoteType.DTop_Long, Note.NoteType.DBottom_Long]
 const GREEN_BAR_NOTES = [Note.NoteType.A_Short, Note.NoteType.FTop_long, Note.NoteType.F_Short, Note.NoteType.CTop_Long]
-const ORANGE_BAR_NOTES = [Note.NoteType.E_Long, Note.NoteType.B_Short, Note.NoteType.A_Long,  Note.NoteType.B_Long,  Note.NoteType.ETop_Long]
+const ORANGE_BAR_NOTES = [Note.NoteType.E_Long, Note.NoteType.B_Short, Note.NoteType.A_Long,  Note.NoteType.B_Long,  Note.NoteType.ETop_Long, Note.NoteType.CBottom_Long]
 var total_notes
 
 # Called when the node enters the scene tree for the first time.

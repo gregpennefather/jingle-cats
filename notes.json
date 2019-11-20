@@ -70,8 +70,8 @@
         "note": "CTop_Long"
     },
     {
-        "index": 39.5,
-        "note": "B_Short"
+        "index": 39,
+        "note": "B_Long"
     },
     {
         "index": 40,
@@ -107,8 +107,8 @@
         "note": "CTop_Long"
     },
     {
-        "index": 55.5,
-        "note": "B_Short"
+        "index": 55,
+        "note": "B_Long"
     },
     {
         "index": 56,
@@ -144,7 +144,7 @@
         "note": "FTop_Long"
     },
     {
-        "index": 71.5,
+        "index": 71,
         "note": "DTop_Long"
     },
     {
@@ -165,7 +165,7 @@
         "note": "CTop_Long"
     },
     {
-        "index": 83.5,
+        "index": 83,
         "note": "G_Long"
     },
     {
@@ -175,10 +175,6 @@
     {
         "index": 85,
         "note": "G_Long"
-    },
-    {
-        "index": 87.5,
-        "note": "F_Short"
     },
     {
         "index": 88,

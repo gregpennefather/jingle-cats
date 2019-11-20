@@ -1,13 +1,19 @@
 extends Node2D
 
+onready var comboLabel = $UI/VBoxContainer/Combo
+
 var score = 0
 
 func _on_NoteBars_note_hit():
 	score = score + 1
 	$UI/VBoxContainer/Score.score = score
-	$UI/VBoxContainer/Combo.increase()
+	comboLabel.increase()
+	if (comboLabel.combo % 15 == 0 && comboLabel.combo != 0):
+		$GameSceneAudioStreamPlayer.play_Doing_Great()
 
 func _on_NoteBars_note_failed():
+	if (comboLabel.combo >= 5):
+		$GameSceneAudioStreamPlayer.play_Beans()
 	$UI/VBoxContainer/Combo.Reset()
 
 func _on_GameLengthTimer_timeout():
