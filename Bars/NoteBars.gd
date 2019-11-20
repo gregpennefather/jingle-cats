@@ -12,10 +12,13 @@ const NOTE_LENGTH = 0.565
 const RED_BAR_NOTES = [Note.NoteType.G_Long, Note.NoteType.DTop_Long,  Note.NoteType.CBottom_Long, Note.NoteType.DBottom_Long]
 const GREEN_BAR_NOTES = [Note.NoteType.A_Short, Note.NoteType.FTop_long, Note.NoteType.F_Short, Note.NoteType.CTop_Long]
 const ORANGE_BAR_NOTES = [Note.NoteType.E_Long, Note.NoteType.B_Short, Note.NoteType.A_Long,  Note.NoteType.B_Long,  Note.NoteType.ETop_Long]
+var total_notes
 
 # Called when the node enters the scene tree for the first time.
 func _ready():	
 	var notes = get_notes('notes.json')
+	
+	total_notes = notes.size()
 
 	var red_notes = []
 	var green_notes = []
@@ -30,6 +33,11 @@ func _ready():
 			orange_notes.append(note_info)
 		else:
 			print('could not find a noteBar for note with type: ' + str(note_info.NoteType))
+
+
+	print("Notes in RedBar: %s" %(str(red_notes.size())))
+	print("Notes in GreenBar: %s" %(str(green_notes.size())))
+	print("Notes in OrangeBar: %s" %(str(orange_notes.size())))
 
 	RedBar.add_note_array(red_notes)
 	GreenBar.add_note_array(green_notes)
@@ -93,7 +101,6 @@ func _on_RedBar_note_hit():
 
 func _on_GreenBar_note_hit():
 	emit_signal("note_hit")
-
 
 func _on_OrangeBar_note_hit():
 	emit_signal("note_hit")
