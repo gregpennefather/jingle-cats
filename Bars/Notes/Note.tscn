@@ -35,11 +35,4 @@ script = ExtResource( 3 )
 colour = Color( 1, 0, 0, 1 )
 
 [node name="Tween" type="Tween" parent="HitCircle"]
-
-[node name="NoteTypeText" type="Label" parent="."]
-margin_left = -5.08434
-margin_top = -32.8405
-margin_right = 34.9157
-margin_bottom = -18.8405
-text = "1"
 [connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]

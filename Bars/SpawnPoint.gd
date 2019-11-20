@@ -49,7 +49,6 @@ func spawn(noteType):
 			note.note_audio = FTop_long
 		Note.NoteType.G_Long:
 			note.note_audio = G_Long
-	note.noteType = noteType		
 		
 	note.position = position
 	note.connect('note_hit', get_parent(), 'on_note_hit')

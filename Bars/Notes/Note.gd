@@ -11,7 +11,6 @@ var note_audio setget set_note_audio
 var target_left_position = 280 - VALID_NOTE_RADIUS
 var target_right_position = 280 + (VALID_NOTE_RADIUS * 2)
 var target_can_be_hit = 280 + (VALID_NOTE_RADIUS*3)
-var noteType setget set_note_type
 var active = true
 
 signal note_missed
@@ -27,9 +26,6 @@ func set_colour(new_colour):
 
 func set_note_audio(audio_stream):
 	get_node("AudioPlayer").stream = audio_stream
-	
-func set_note_type(noteType):
-	get_node("NoteTypeText").text = str(noteType)
 
 func _process(delta):
 	position = position - Vector2(NOTE_SPEED * delta, 0)

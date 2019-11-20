@@ -36,6 +36,8 @@ func _input(event):
 		var next_note = notes.first_valid_note()
 		if (next_note != null):
 			next_note.play()
+		else:
+			emit_signal("note_failed")
 	
 func on_note_hit():
 	animation_player.play('hit')

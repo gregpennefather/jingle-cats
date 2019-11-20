@@ -77,8 +77,10 @@ theme = ExtResource( 3 )
 [node name="Difficulty" type="Label" parent="UI"]
 anchor_left = 1.0
 anchor_right = 1.0
-margin_left = -139.0
-margin_bottom = 72.0
+margin_left = -147.0
+margin_top = 4.0
+margin_right = -8.0
+margin_bottom = 76.0
 custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 0.886275, 0.0745098, 0.313726, 1 )
 text = "Hard"
@@ -89,7 +91,8 @@ margin_right = 214.0
 margin_bottom = 148.0
 
 [node name="Score" type="Label" parent="UI/VBoxContainer"]
-margin_right = 214.0
+margin_left = 5.0
+margin_right = 219.0
 margin_bottom = 72.0
 custom_fonts/font = ExtResource( 4 )
 text = "Score: 0"
@@ -97,8 +100,9 @@ align = 1
 script = ExtResource( 5 )
 
 [node name="Combo" type="Label" parent="UI/VBoxContainer"]
+margin_left = 14.0
 margin_top = 76.0
-margin_right = 214.0
+margin_right = 228.0
 margin_bottom = 148.0
 custom_fonts/font = ExtResource( 4 )
 text = "Combo: 0"
@@ -106,6 +110,7 @@ align = 1
 script = ExtResource( 6 )
 
 [node name="Panel" type="Panel" parent="UI"]
+editor/display_folded = true
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
@@ -116,10 +121,11 @@ margin_right = 640.0
 theme = ExtResource( 3 )
 
 [node name="Press Keys" type="Label" parent="UI/Panel"]
-margin_left = 30.0
-margin_right = 102.0
-margin_bottom = 40.0
-custom_colors/font_color = Color( 0.886275, 0.0745098, 0.313726, 1 )
+margin_left = 38.0
+margin_top = -6.0
+margin_right = 110.0
+margin_bottom = 34.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_x = 4
 custom_constants/shadow_offset_y = 1
 custom_constants/shadow_as_outline = 1
@@ -134,6 +140,7 @@ margin_right = 72.0
 margin_bottom = 38.5
 
 [node name="ResultPanel" type="Panel" parent="UI"]
+editor/display_folded = true
 visible = false
 margin_left = 450.0
 margin_top = 120.0
