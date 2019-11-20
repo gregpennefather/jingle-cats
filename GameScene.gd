@@ -6,6 +6,15 @@ onready var noteBars = $UI/Panel/NoteBars
 
 var score = 0
 
+func _ready():
+	var timer = Timer.new()
+	timer.name = 'SimonAndDuncanTimer'
+	timer.wait_time = 48
+	timer.one_shot = true
+	timer.connect('timeout', self, 'simonAndDuncan')
+	add_child(timer)
+	timer.start()
+
 func _on_NoteBars_note_hit(noteIndex):
 	score = score + 1
 	print(noteIndex)
@@ -36,3 +45,8 @@ func _on_BlaghButton_pressed():
 	
 func evil_ben():
 	videoAnimation.play('evil_ben')
+	
+func simonAndDuncan():
+	$VideoPlayer.volume_db = -80
+	$VideoPlayer/SimonAndDuncanPlayer.show()
+	$VideoPlayer/SimonAndDuncanPlayer.play()
