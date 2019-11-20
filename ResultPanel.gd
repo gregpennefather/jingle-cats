@@ -8,7 +8,7 @@ func _ready():
 	button.connect("pressed", self, "_on_Button_pressed", [button.scene_to_transition_to])
 
 func showResults(score, max_notes, combo):
-	var succeeded = ((score / max_notes) * 100) >= 80
+	var succeeded = score > 36
 	var scoreString = "Score: %s / %s" %[str(score), str(max_notes)]
 	if (succeeded):
 		$VBoxContainer/ResultText.text = "Well done!"
