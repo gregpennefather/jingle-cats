@@ -9,9 +9,9 @@ signal note_failed
 
 const FIRST_NOTE_OFFSET = 10.5
 const NOTE_LENGTH = 0.565
-const RED_BAR_NOTES = [Note.NoteType.G_Long, Note.NoteType.E_Long, Note.NoteType.CBottom_Long, Note.NoteType.DBottom_Long, Note.NoteType.CTop_Long]
-const GREEN_BAR_NOTES = [Note.NoteType.A_Long, Note.NoteType.B_Long, Note.NoteType.DTop_Long, Note.NoteType.F_Short]
-const BLUE_BAR_NOTES = [Note.NoteType.A_Short, Note.NoteType.B_Short, Note.NoteType.FTop_long, Note.NoteType.ETop_Long]
+const RED_BAR_NOTES = [Note.NoteType.G_Long, Note.NoteType.DTop_Long,  Note.NoteType.CBottom_Long, Note.NoteType.DBottom_Long]
+const GREEN_BAR_NOTES = [Note.NoteType.A_Short, Note.NoteType.FTop_long, Note.NoteType.F_Short, Note.NoteType.CTop_Long]
+const ORANGE_BAR_NOTES = [Note.NoteType.E_Long, Note.NoteType.B_Short, Note.NoteType.A_Long,  Note.NoteType.B_Long,  Note.NoteType.ETop_Long]
 
 # Called when the node enters the scene tree for the first time.
 func _ready():	
@@ -26,7 +26,7 @@ func _ready():
 			red_notes.append(note_info)
 		elif (note_info.NoteType in GREEN_BAR_NOTES):
 			green_notes.append(note_info)
-		elif (note_info.NoteType in BLUE_BAR_NOTES):
+		elif (note_info.NoteType in ORANGE_BAR_NOTES):
 			orange_notes.append(note_info)
 		else:
 			print('could not find a noteBar for note with type: ' + str(note_info.NoteType))
