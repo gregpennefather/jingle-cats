@@ -12,6 +12,7 @@ var target_left_position = 280 - VALID_NOTE_RADIUS
 var target_right_position = 280 + (VALID_NOTE_RADIUS * 2)
 var target_can_be_hit = 280 + (VALID_NOTE_RADIUS*3)
 var active = true
+var noteIndex
 
 signal note_missed
 signal note_hit
@@ -46,7 +47,7 @@ func play():
 			note_hit_early()
 	
 func note_hit():
-	emit_signal('note_hit')
+	emit_signal('note_hit', noteIndex)
 	hitCircle.expand(20, 40, 0.2);
 	get_node("AudioPlayer").play()
 	make_note_inactive(false)

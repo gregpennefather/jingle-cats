@@ -18,8 +18,8 @@ func _ready():
 	spawner.note_colour = note_colour
 	get_node("Outline").default_color = note_colour
 	
-func add_note(noteType):
-	get_node("SpawnPoint").spawn(noteType)
+func add_note(noteType, noteIndex):
+	get_node("SpawnPoint").spawn(noteType, noteIndex)
 	
 func add_note_array(note_play_info_array):
 	for play_info in note_play_info_array:
@@ -27,7 +27,7 @@ func add_note_array(note_play_info_array):
 		timer.name = 'Time' + str(play_info.PlayTime) + 'Note' + str(play_info.NoteType)
 		timer.wait_time = play_info.PlayTime - 4
 		timer.one_shot = true
-		timer.connect('timeout', self, 'add_note', [play_info.NoteType])
+		timer.connect('timeout', self, 'add_note', [play_info.NoteType, play_info.NoteIndex])
 		add_child(timer)
 		timer.start()
 	
@@ -39,9 +39,9 @@ func _input(event):
 		else:
 			emit_signal("note_failed")
 	
-func on_note_hit():
+func on_note_hit(noteIndex):
 	animation_player.play('hit')
-	emit_signal('note_hit')
+	emit_signal('note_hit', noteIndex)
 
 func on_note_missed():
 	animation_player.play('missed')

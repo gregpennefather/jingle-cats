@@ -3,3 +3,4 @@ extends Reference
 
 var PlayTime
 var NoteType
+var NoteIndex

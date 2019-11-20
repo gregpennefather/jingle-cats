@@ -17,7 +17,7 @@ export (AudioStream) var FTop_long
 export (AudioStream) var G_Long
 var note_colour
 
-func spawn(noteType):
+func spawn(noteType, noteIndex):
 	var note = note_scene.instance()
 	note.colour = note_colour
 	match noteType:
@@ -49,6 +49,7 @@ func spawn(noteType):
 			note.note_audio = FTop_long
 		Note.NoteType.G_Long:
 			note.note_audio = G_Long
+	note.noteIndex = noteIndex
 		
 	note.position = position
 	note.connect('note_hit', get_parent(), 'on_note_hit')

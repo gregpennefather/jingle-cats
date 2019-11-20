@@ -44,10 +44,11 @@ func _ready():
 	OrangeBar.add_note_array(orange_notes)
 
 
-func createNotePlayInfo(playTime, noteType):
+func createNotePlayInfo(playTime, noteType, noteIndex):
 	var play_info = PlayTimeInfo.new()
 	play_info.PlayTime = playTime
 	play_info.NoteType = noteType
+	play_info.NoteIndex = noteIndex
 	return play_info
 
 func get_notes(filename):
@@ -59,7 +60,7 @@ func get_notes(filename):
 func load_note_info(note_info_array: Array) -> Array:
 	var notes = []
 	for note_info in note_info_array:
-		notes.append(createNotePlayInfo(note_index_to_playtime(note_info.index), noteStringToEnum(note_info.note)))
+		notes.append(createNotePlayInfo(note_index_to_playtime(note_info.index), noteStringToEnum(note_info.note), note_info.index))
 	return notes
 	
 func note_index_to_playtime(index):
@@ -95,15 +96,14 @@ func noteStringToEnum(noteTypeString):
 	print('could no match noteTypeString : ' + noteTypeString)
 	return null
 
-func _on_RedBar_note_hit():
-	emit_signal("note_hit")
+func _on_RedBar_note_hit(noteIndex):
+	emit_signal("note_hit", noteIndex)
 
+func _on_GreenBar_note_hit(noteIndex):
+	emit_signal("note_hit", noteIndex)
 
-func _on_GreenBar_note_hit():
-	emit_signal("note_hit")
-
-func _on_OrangeBar_note_hit():
-	emit_signal("note_hit")
+func _on_OrangeBar_note_hit(noteIndex):
+	emit_signal("note_hit", noteIndex)
 
 func _on_note_failed():
 	emit_signal("note_failed")
