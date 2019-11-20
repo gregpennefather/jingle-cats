@@ -16,7 +16,7 @@ font_data = ExtResource( 4 )
 
 [node name="Menu" type="Control"]
 margin_right = 1280.0
-margin_bottom = 720.0
+margin_bottom = 725.0
 rect_scale = Vector2( 1, 0.99046 )
 theme = ExtResource( 1 )
 script = ExtResource( 2 )
@@ -31,6 +31,7 @@ position = Vector2( 650, 150 )
 texture = ExtResource( 3 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
+editor/display_folded = true
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -52,6 +53,7 @@ text = "SHARK HERO
 align = 1
 
 [node name="Buttons" type="VBoxContainer" parent="VBoxContainer"]
+editor/display_folded = true
 margin_top = 182.0
 margin_right = 513.0
 margin_bottom = 312.0
@@ -89,6 +91,24 @@ margin_top = 327.0
 margin_right = 513.0
 margin_bottom = 446.0
 texture = ExtResource( 7 )
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+margin_left = 986.0
+margin_top = 575.49
+margin_right = 1257.0
+margin_bottom = 702.49
+
+[node name="Label" type="Label" parent="VBoxContainer2"]
+margin_right = 271.0
+margin_bottom = 83.0
+text = "Made by:
+Palenar & Kris10"
+
+[node name="Label2" type="Label" parent="VBoxContainer2"]
+margin_top = 87.0
+margin_right = 271.0
+margin_bottom = 127.0
+text = "Thanks to KenneyNL"
 
 [node name="FadedTransition" parent="." instance=ExtResource( 8 )]
 visible = false
