@@ -4,7 +4,7 @@
 [ext_resource path="res://Menu.gd" type="Script" id=2]
 [ext_resource path="res://Images/Banner.png" type="Texture" id=3]
 [ext_resource path="res://Beyond Wonderland.ttf" type="DynamicFontData" id=4]
-[ext_resource path="res://festive_font.tres" type="DynamicFont" id=5]
+[ext_resource path="res://32_font.tres" type="DynamicFont" id=5]
 [ext_resource path="res://SceneTransitionButton.gd" type="Script" id=6]
 [ext_resource path="res://Images/BuyTheBundle.png" type="Texture" id=7]
 [ext_resource path="res://FadedTransition.tscn" type="PackedScene" id=8]
@@ -22,16 +22,15 @@ theme = ExtResource( 1 )
 script = ExtResource( 2 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
-modulate = Color( 0.0392157, 0.27451, 0.498039, 1 )
 anchor_right = 1.0
 anchor_bottom = 1.0
+color = Color( 0.0352941, 0.254902, 0.478431, 1 )
 
 [node name="Banner" type="Sprite" parent="."]
 position = Vector2( 650, 150 )
 texture = ExtResource( 3 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-editor/display_folded = true
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -53,15 +52,14 @@ text = "SHARK HERO
 align = 1
 
 [node name="Buttons" type="VBoxContainer" parent="VBoxContainer"]
-editor/display_folded = true
 margin_top = 182.0
 margin_right = 513.0
-margin_bottom = 312.0
+margin_bottom = 300.0
 custom_constants/separation = 5
 
 [node name="Easy" type="Button" parent="VBoxContainer/Buttons"]
 margin_right = 513.0
-margin_bottom = 40.0
+margin_bottom = 36.0
 grow_horizontal = 0
 custom_fonts/font = ExtResource( 5 )
 text = "Easy"
@@ -69,30 +67,31 @@ script = ExtResource( 6 )
 scene_to_transition_to = "res://Sorry.tscn"
 
 [node name="Medium" type="Button" parent="VBoxContainer/Buttons"]
-margin_top = 45.0
+margin_top = 41.0
 margin_right = 513.0
-margin_bottom = 85.0
+margin_bottom = 77.0
 custom_fonts/font = ExtResource( 5 )
 text = "Medium"
 script = ExtResource( 6 )
 scene_to_transition_to = "res://Sorry.tscn"
 
 [node name="Hard" type="Button" parent="VBoxContainer/Buttons"]
-margin_top = 90.0
+margin_top = 82.0
 margin_right = 513.0
-margin_bottom = 130.0
+margin_bottom = 118.0
 custom_fonts/font = ExtResource( 5 )
-text = "Hard"
+text = "Try Hard"
 script = ExtResource( 6 )
-scene_to_transition_to = "res://GameScene.tscn"
+scene_to_transition_to = "res://HowToPlay.tscn"
 
 [node name="TextureRect" type="TextureRect" parent="VBoxContainer"]
-margin_top = 327.0
+margin_top = 315.0
 margin_right = 513.0
-margin_bottom = 446.0
+margin_bottom = 434.0
 texture = ExtResource( 7 )
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="."]
+editor/display_folded = true
 margin_left = 986.0
 margin_top = 575.49
 margin_right = 1257.0
@@ -100,14 +99,14 @@ margin_bottom = 702.49
 
 [node name="Label" type="Label" parent="VBoxContainer2"]
 margin_right = 271.0
-margin_bottom = 83.0
+margin_bottom = 75.0
 text = "Made by:
 Palenar & Kris10"
 
 [node name="Label2" type="Label" parent="VBoxContainer2"]
-margin_top = 87.0
+margin_top = 79.0
 margin_right = 271.0
-margin_bottom = 127.0
+margin_bottom = 115.0
 text = "Thanks to KenneyNL"
 
 [node name="FadedTransition" parent="." instance=ExtResource( 8 )]

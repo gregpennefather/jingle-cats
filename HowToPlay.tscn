@@ -1,0 +1,114 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://festive_theme.tres" type="Theme" id=1]
+[ext_resource path="res://HowToPlay.gd" type="Script" id=2]
+[ext_resource path="res://Images/arrowRight.png" type="Texture" id=3]
+[ext_resource path="res://Images/arrowLeft.png" type="Texture" id=4]
+[ext_resource path="res://Images/arrowDown.png" type="Texture" id=5]
+[ext_resource path="res://NoteTargetExample.gd" type="Script" id=6]
+[ext_resource path="res://festive_font.tres" type="DynamicFont" id=7]
+[ext_resource path="res://32_font.tres" type="DynamicFont" id=8]
+[ext_resource path="res://SceneTransitionButton.gd" type="Script" id=9]
+
+[node name="HowToPlay" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.0352941, 0.254902, 0.478431, 1 )
+
+[node name="Examples" type="Control" parent="."]
+margin_left = 8.0
+margin_top = 60.0
+margin_right = 48.0
+margin_bottom = 100.0
+
+[node name="arrowRight" type="Sprite" parent="Examples"]
+modulate = Color( 1, 0.631373, 0, 1 )
+position = Vector2( 610, 370 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 3 )
+
+[node name="arrowLeft" type="Sprite" parent="Examples"]
+modulate = Color( 1, 0, 0, 1 )
+position = Vector2( 610, 290 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 4 )
+
+[node name="arrowDown" type="Sprite" parent="Examples"]
+modulate = Color( 0, 1, 0.180392, 1 )
+position = Vector2( 610, 330 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 5 )
+
+[node name="Target" type="Control" parent="Examples"]
+margin_left = 610.0
+margin_top = 250.0
+margin_right = 610.0
+margin_bottom = 250.0
+script = ExtResource( 6 )
+colour = Color( 1, 0, 0, 1 )
+radius = 14.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -324.0
+margin_top = 120.0
+margin_right = 1161.0
+margin_bottom = 441.0
+
+[node name="HowToPlayLabel" type="Label" parent="VBoxContainer"]
+margin_right = 1485.0
+margin_bottom = 122.0
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 0.886275, 0.0745098, 0.313726, 1 )
+text = "How to play:"
+
+[node name="PressKeysLabel" type="Label" parent="VBoxContainer"]
+margin_top = 126.0
+margin_right = 1485.0
+margin_bottom = 201.0
+custom_fonts/font = ExtResource( 8 )
+text = "- Press the corresponding key as the 
+   note hits the target:"
+
+[node name="LeftArrow" type="Label" parent="VBoxContainer"]
+margin_top = 205.0
+margin_right = 1485.0
+margin_bottom = 241.0
+custom_fonts/font = ExtResource( 8 )
+text = "- Left Arrow: "
+
+[node name="DownArrow" type="Label" parent="VBoxContainer"]
+margin_top = 245.0
+margin_right = 1485.0
+margin_bottom = 281.0
+custom_fonts/font = ExtResource( 8 )
+text = "- Down Arrow: "
+
+[node name="RightArrow2" type="Label" parent="VBoxContainer"]
+margin_top = 285.0
+margin_right = 1485.0
+margin_bottom = 321.0
+custom_fonts/font = ExtResource( 8 )
+text = "- Right Arrow: "
+
+[node name="Button" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -316.0
+margin_top = -210.0
+margin_right = 294.0
+margin_bottom = -160.0
+custom_fonts/font = ExtResource( 8 )
+text = "Okay whatever I know how to play games"
+script = ExtResource( 9 )
+scene_to_transition_to = "res://GameScene.tscn"
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

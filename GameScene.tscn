@@ -20,7 +20,7 @@
 [ext_resource path="res://OtherAudio/youredoinggreatdad.wav" type="AudioStream" id=18]
 [ext_resource path="res://OtherAudio/beans.wav" type="AudioStream" id=19]
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=1]
 resource_name = "audio_switch"
 length = 0.5
 tracks/0/type = "value"
@@ -48,7 +48,7 @@ tracks/1/keys = {
 "values": [ -80.0, 0.0 ]
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=2]
 resource_name = "bounce_shark"
 length = 0.5
 tracks/0/type = "value"
@@ -76,7 +76,7 @@ tracks/1/keys = {
 "values": [ true, false ]
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=3]
 resource_name = "evil_ben"
 length = 0.6
 tracks/0/type = "value"
@@ -104,8 +104,7 @@ tracks/1/keys = {
 "values": [ 0.0, -10.0, 10.0, 0.0 ]
 }
 
-[sub_resource type="Animation" id=1]
-resource_name = "fade_out"
+[sub_resource type="Animation" id=4]
 length = 3.0
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:modulate")
@@ -159,14 +158,14 @@ tracks/1/keys = {
 "values": [ true, false, true, false ]
 }
 
-[sub_resource type="StyleBoxFlat" id=3]
+[sub_resource type="StyleBoxFlat" id=6]
 bg_color = Color( 0.294118, 0.67451, 0.839216, 1 )
 corner_radius_top_left = 5
 corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=7]
 size = 64
 font_data = ExtResource( 14 )
 
@@ -180,10 +179,10 @@ stream = ExtResource( 2 )
 autoplay = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="VideoPlayer"]
-anims/audio_switch = SubResource( 7 )
-anims/bounce_shark = SubResource( 6 )
-anims/evil_ben = SubResource( 4 )
-anims/fade_out = SubResource( 1 )
+anims/audio_switch = SubResource( 1 )
+anims/bounce_shark = SubResource( 2 )
+anims/evil_ben = SubResource( 3 )
+anims/fade_out = SubResource( 4 )
 anims/mouth_ben = SubResource( 5 )
 
 [node name="cropped-evil-ben" type="Sprite" parent="VideoPlayer"]
@@ -298,7 +297,7 @@ margin_left = 450.0
 margin_top = 120.0
 margin_right = 810.0
 margin_bottom = 420.0
-custom_styles/panel = SubResource( 3 )
+custom_styles/panel = SubResource( 6 )
 script = ExtResource( 13 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="UI/ResultPanel"]
@@ -309,7 +308,7 @@ custom_constants/separation = 10
 [node name="ResultText" type="Label" parent="UI/ResultPanel/VBoxContainer"]
 margin_right = 360.0
 margin_bottom = 72.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 0.886275, 0.0745098, 0.313726, 1 )
 text = "Oof not great"
 align = 1
